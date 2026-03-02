@@ -1,0 +1,58 @@
+.tabList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  max-width: 100vw;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tabList::-webkit-scrollbar {
+  display: none;
+}
+
+.tabList button {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  padding: 17px 27px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    var(--Secondary, #d10005) 0%,
+    var(--Secondary-2, #ff9000) 100%
+  );
+  color: var(--Background-2, #fff);
+  font-family: Poppins;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -1.32px;
+}
+@media (max-width: 1024px) {
+  .hiddenForMobile {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .hiddenForDesktop {
+    display: none;
+  }
+}

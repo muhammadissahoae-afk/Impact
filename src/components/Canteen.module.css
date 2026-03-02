@@ -1,0 +1,19 @@
+.buttonCanteen {
+  display: flex;
+  width: fit-content;
+  padding: 11px 25px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 26.5px;
+  border: 1px solid var(--Teel-Green, rgba(24, 214, 217, 0.3));
+  background: var(--Teel-Green, rgba(24, 214, 217, 0.3));
+  color: var(--Background-2, #fff);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: -1px;
+}

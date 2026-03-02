@@ -1,0 +1,54 @@
+.buttonList {
+  display: flex;
+  height: 53px;
+  /* padding: 11px; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 26.5px;
+  background: var(--Background-2, #e9eef3);
+}
+.buttonUnActive {
+  color: var(--Primary, #022b52);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  letter-spacing: -0.9px;
+  border-radius: 26.5px;
+  padding: 25px 25px;
+}
+.buttonActive {
+  color: var(--Primary, #fff);
+  display: flex;
+  /* width: 145px; */
+  height: 52px;
+  padding: 11px 29px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 26.5px;
+  background: var(--Primary, #022b52);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.buttonArrow {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 4px 3px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 22px;
+  border-radius: 22px;
+  background: var(--Background-2, #fff);
+}
+.buttonArrow:hover {
+  border: 1px solid var(--Primary, #022b52);
+  background: var(--Primary, #022b52);
+  color: var(--Primary, #fff);
+}

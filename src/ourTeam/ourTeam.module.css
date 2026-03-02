@@ -1,0 +1,26 @@
+.gradient-blur {
+  backdrop-filter: blur(10px);
+  mask-image: linear-gradient(to top, black 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 0%, transparent 100%);
+}
+.name {
+  color: var(--Background-2, #fff);
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 45px; /* 150% */
+  letter-spacing: -1.8px;
+  align-self: flex-start;
+}
+
+.title {
+  color: var(--Background-2, #fff);
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%; /* 27px */
+  letter-spacing: -1.08px;
+  align-self: flex-start;
+}

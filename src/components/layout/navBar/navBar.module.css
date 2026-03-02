@@ -1,0 +1,163 @@
+/* =========================
+   1. CSS Variables & Themes
+   ========================= */
+:root {
+  --nav-bg-default: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-inner[data-nav-theme="dark"] {
+  --nav-bg: rgba(2, 43, 82, 0.1);
+  --nav-border: rgba(255, 255, 255, 0.12);
+  --nav-fg: #022b52;
+  --nav-hover-bg: #ff0019;
+  --nav-active-bg: #d10005;
+  --nav-fg-muted: rgba(255, 255, 255, 0.8);
+  --btn-auth-bg: #022b52;
+  --btn-auth-color: #fff;
+  --btn-auth-border-color: #022b52;
+}
+
+.navbar-inner[data-nav-theme="light"] {
+  --nav-bg: rgba(255, 255, 255, 0.1);
+  --nav-border: rgba(2, 43, 82, 0.12);
+  --nav-fg: #fff;
+  --nav-hover-bg: rgba(2, 43, 82, 0.08);
+  --nav-active-bg: #d10005;
+  --nav-fg-muted: rgba(2, 43, 82, 0.7);
+  --btn-auth-bg: #fff;
+  --btn-auth-color: #022b52;
+  --btn-auth-border-color: #fff;
+}
+
+/* =========================
+   2. Base Layout (Desktop First)
+   ========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* لمنع حجب النقرات عند الاختفاء */
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 23px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  background: var(--nav-bg, var(--nav-bg-default));
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.desktop-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.mobile-buttons {
+  display: none; /* مخفي في الشاشات الكبيرة */
+}
+
+.menu-icon {
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* =========================
+   3. Unified Media Query (1360px)
+   ========================= */
+@media (max-width: 1060px) {
+  /* تعديل الروابط لتصبح قائمة عمودية */
+  .nav-links {
+    display: none; /* تم إصلاح display: hidden */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    z-index: 1500;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .nav-links.active {
+    display: flex;
+    background: var(--nav-bg, var(--nav-bg-default));
+    border-radius: 25px;
+    padding: 20px;
+  }
+
+  /* إخفاء عناصر الديسكتوب وإظهار الموبايل */
+  .desktop-buttons {
+    display: none;
+  }
+
+  .mobile-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  /* حالة فتح القائمة */
+  body.mobile-menu-open .navbar-inner {
+    display: none;
+    opacity: 0;
+  }
+}
+
+/* =========================
+   4. Reusable Buttons Styles
+   ========================= */
+.btn-nav {
+  color: var(--nav-fg, #fff);
+  background: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 11px 13px;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-nav:hover {
+  background-color: var(--nav-hover-bg, #ff0019);
+}
+
+.btn-auth {
+  border: 1px solid var(--btn-auth-border-color);
+  background: var(--btn-auth-bg);
+  color: var(--btn-auth-color);
+}
+
+.btn-glass-auth {
+  border: 1px solid var(--btn-auth-border-color);
+  background: transparent;
+  color: var(--btn-auth-border-color);
+}
+
+.activeLink {
+  background-color: var(--nav-active-bg);
+  color: white !important;
+}

@@ -1,0 +1,25 @@
+{
+  "tailwindCSS.lint.recommendedVariantOrder": "warning",
+  "tailwindCSS.lint.invalidApply": "error",
+  "tailwindCSS.lint.invalidScreenLayout": "error",
+  "tailwindCSS.lint.invalidVariantOrder": "warning",
+  "tailwindCSS.lint.invalidConfigPath": "error",
+  "tailwindCSS.lint.suggestCanonicalClasses": "warning",
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "@apply\\s+([^;]+)",
+      "([^;]+)"
+    ]
+  ],
+  "css.lint.unknownAtRules": "ignore",
+  "postcss.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "css",
+    "postcss": "css",
+    "css": "css"
+  },
+  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
